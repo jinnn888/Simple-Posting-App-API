@@ -13,7 +13,11 @@ dotenv.config()
 connectDB()
 
 const app = express()
-app.use(cors())
+app.use(cors({
+     origin: ['https://simple-posting-app-eosin.vercel.app/'],
+     methods: ['GET', 'POST', 'PUT', 'DELETE'],
+     credentials: true
+}))
 app.use(cookieParser())
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
