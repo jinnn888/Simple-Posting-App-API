@@ -15,15 +15,6 @@ export const addPost = async(req, res) => {
      return res.status(400).json({msg: 'something went wrong.', error: err})
 }
 }
-export const getImage = async(req, res) => {
-     try {
-          const img = await Images.find()
-          res.json(img)
-     } catch(e) {
-          // statements
-          console.log(e);
-     }
-}
 
 export const deletePost = async(req, res) => {
      try {
