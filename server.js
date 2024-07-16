@@ -24,8 +24,8 @@ app.use(express.urlencoded({extended: false}))
 
 
 // Routes
-app.use('/api/', userRouter)
-app.use('/api/', postRouter)
+app.use('/api', userRouter)
+app.use('/api', postRouter)
 const PORT = process.env.PORT
 
 app.listen( PORT, () => {
